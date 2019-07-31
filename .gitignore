@@ -3,3 +3,4 @@ channel_env/
 instance/
 __pycache__/
 .vscode/
+start.sh
