@@ -3,19 +3,33 @@
 <!-- Styles block -->
 
 {% block styles%} {{ super() }}
-<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}"> {% endblock %}
+<link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}"> {% endblock %}
 <!-- Content block -->
 <!-- Content block -->
 {% block content %}
 <div class="container">
-    {% for article in articles %}
-    <!-- Poster background -->
+    <div class="jumbotron">
 
-    <h3>{{ article.title }}</h3>
-    <img src='{{article.urlToImage}} ' alt="image loading" height="200">
-    <p class="description"> {{ article.description }}</p>
-    <p class="publishedAt">Published on:{{ article.publishedAt}}</p>
-    <a id="link" href="{{article.url}}" target="_blank">Read more</a> {%endfor%}
+        <h1>Channel 24/7</h1>
+        <a href="#">
+            << back to news sources</a>
+    </div>
+    <div class="row">
+        {% for article in articles %}
+        <!-- Poster background -->
+        <div class="col-md-6">
+            <div class="well">
+                <a id="link" href="{{article.url}}" target="_blank">
+                    <h3>{{ article.title }}</h3>
+                </a>
+
+                <img src='{{article.urlToImage}} ' alt="image loading" height="200">
+                <p class="description"> {{ article.description }}</p>
+                <p class="publishedAt">Published on:{{ article.publishedAt}}</p>
+            </div>
+        </div>
+        {%endfor%}
+    </div>
 </div>
 
 {% endblock %}

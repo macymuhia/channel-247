@@ -1,0 +1,26 @@
+li.container {
+    overflow: hidden;
+    list-style: none;
+}
+
+.filterDiv {
+    display: inline;
+    line-height: 20px;
+    text-align: center;
+    margin: 2px;
+    font-size: 20px;
+}
+
+.jumbotron h1 {
+    text-align: center;
+}
+
+.jumbotron h1 {
+    color: whitesmoke;
+}
+
+.jumbotron {
+    color: whitesmoke;
+    background-color: black;
+    padding-bottom: 0px;
+}

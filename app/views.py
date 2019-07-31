@@ -18,7 +18,7 @@ def index():
     sports_news = get_news("sports")
     general_news = get_news("general")
     entertainment_news = get_news("entertainment")
-    title = "Home - Welcome to News"
+    title = "Channel 24/7"
     return render_template(
         "index.html",
         title=title,

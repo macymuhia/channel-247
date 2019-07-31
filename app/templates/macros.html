@@ -1,12 +1,11 @@
- {% macro displayNewsList(article_list) %} {% for article in article_list %}
+ {% macro displayNewsList(article_list) %}
 <div class="row">
-    <div class="col-md-6">
-        <!-- <img src="{{ article.poster }}" alt="{{ article.title }} poster" class="img-responsive"> -->
-        <li class="text-center">
-            <a id="link" href="/article/{{article.id}}" target="_blank">{{article.name }}</a>
-        </li>
-        <p class="well">{{article.description}}</p>
+    {% for article in article_list %}
+    <div class="col-sm-4">
+        <p class="well">
+            <a id="link" href="/article/{{article.id}}">{{article.name  }}</a>
+        </p>
     </div>
+    {% endfor %}
 </div>
-
-{% endfor %} {% endmacro %}
+{% endmacro %}
